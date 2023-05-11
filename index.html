@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laboratoria</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>TRIVIA LABORATORIA</h1>
+      <p>¿Qué tanto sabes de cine?</p>
+    </header>
+    <form class="container">
+      <!-- Contenedor Padre -->
+      <section id="questionUno">
+         <!-- Contenedor Hijo 1 -->
+        <figure>
+          <img
+            src="/assets/images/chris-evans.jpg"
+            alt="chris evans"
+            class="photo"
+            width="200"
+          />
+        </figure>
+        <!-- Contenedor Hijo 2-->
+        <div class="card__description">
+        <h3>1 - ¿En cuál de estas películas participo Chris Evans?</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" value="Avengers" name="radio1" class="correct" />Avengers
+          </label>
+          <label>
+            <input type="radio" value="Harry Potter" name="radio1" class="incorrect" />Harry Potter
+          </label>
+          <label>
+            <input type="radio" value="Rápido y Furioso" name="radio1" class="incorrect" />Rápido y Furioso
+          </label>
+        </div>
+        </div>
+      </section>
+
+      <!-- Contenedor Padre -->
+      <section id="questionDos">
+        <!-- Contenedor Hijo 1 -->
+        <figure>
+          <img
+            src="/assets/images/Harry-Potter.jpg"
+            alt="Harry Potter"
+            class="photo"
+            width="200"
+          />
+        </figure>
+
+        <!-- Contenedor Hijo 2-->
+        <div class="card__description">
+          <h3>2 - ¿Cuántas secuelas tuvo Harry Potter?</h3>
+          <div class="radio">
+            <label> <input type="radio" value="7" name="radio2" class="incorrect" />Siete </label>
+            <label> <input type="radio" value="8" name="radio2" class="correct" />Ocho </label>
+            <label> <input type="radio" value="9" name="radio2" class="incorrect" />Nueve </label>
+          </div>
+        </div>
+
+        
+      </section>
+      <section id="questionTres">
+        <!-- Contenedor Hijo 1 -->
+        <figure>
+          <img
+            src="/assets/images/rapido-furioso.jpg"
+            alt="Harry Potter"
+            class="photo"
+            width="200"
+          />
+        </figure>
+
+        <!-- Contenedor Hijo 2-->
+        <div class="card__description">
+          <h3>2 - ¿En que año se estreno Rápido y Furioso: Reto Tokio?</h3>
+          <div class="radio">
+            <label> <input type="radio" value="2003" name="radio3" class="incorrect" />2003</label>
+            <label> <input type="radio" value="2016" name="radio3" class="incorrect" />2016 </label>
+            <label> <input type="radio" value="2006" name="radio3" class="correct" />2006 </label>
+          </div>
+        </div>
+
+        
+      </section>
+      <div class="buttom__footer">
+        <button class="buttom" onclick="verResultados()">Ver resultados</button>
+      </div>
+      <div id="resultados"></div>
+    </form>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
+
