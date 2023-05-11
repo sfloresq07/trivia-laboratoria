@@ -6,33 +6,27 @@ opcionesRadio.forEach((opcion) => {
   });
 }); */
 
-function verResultados() {
-  const opcionesSeleccionadas = document.querySelectorAll('input[type="radio"]:checked');
+const boton = document.querySelector('.buttom');
 
-  if (opcionesSeleccionadas.length === 0) {
-    alert("Por favor seleccione una opción.");
-    return;
-  }
+boton.addEventListener('click', (event) => {
+  event.preventDefault(); 
 
-  let respuestasCorrectas = 0;
-  let respuestasIncorrectas = 0;
+  const respuestas = [];
+  
+  const preguntas = document.querySelectorAll('section');
 
-  opcionesSeleccionadas.forEach(opcion => {
-    if (opcion.classList.contains("correct")) {
-      respuestasCorrectas++;
-    } else {
-      respuestasIncorrectas++;
-    }
-  });
-
-  alert(`Respuestas correctas: ${respuestasCorrectas}\nRespuestas incorrectas: ${respuestasIncorrectas}`);
-
-  const opcionesIncorrectasSeleccionadas = document.querySelectorAll('input[type="radio"].incorrect:checked');
-
-  opcionesIncorrectasSeleccionadas.forEach(opcion => {
-    const pregunta = opcion.name.replace("radio", "");
-    const respuestaCorrecta = document.querySelector(`input[type="radio"].correct[name="radio${pregunta}"]`).value;
-    alert(`La respuesta seleccionada para la pregunta ${pregunta} es incorrecta. La respuesta correcta es: ${respuestaCorrecta}`);
-  });
-} 
+   preguntas.forEach((pregunta) => {
     
+    const opciones = pregunta.querySelectorAll('input[type="radio"]');
+
+       opciones.forEach((opcion) => {
+      // Si la opción está marcada, agregar su valor al array de respuestas
+      if (opcion.checked) {
+        respuestas.push(opcion.value);
+      }
+    });
+  });
+
+  // Mostrar las respuestas en un mensaje de alerta
+  alert(`Tus respuestas son: ${respuestas.join(', ')}`);
+});  

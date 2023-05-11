@@ -1,0 +1,10 @@
+En este proyecto tenemos un archivo .html otro .css y otro .js Asi mismo tambien tenemos una carpeta assets que contiene otra carpeta images donde se encuentra el material multimedia. 
+
+Dentro de la etiqueta head, se encuentran la etiqueta title, que define el título de la página, y la etiqueta meta, que establece la codificación de caracteres como UTF-8. También se incluye una etiqueta link que vincula la hoja de estilos stylestrivia.css para definir la apariencia de la página.
+
+Dentro de la etiqueta body, se encuentra el contenido principal de la página. Hay un encabezado con un título y un párrafo que da una breve introducción a la trivia.
+
+Luego, hay tres secciones que contienen preguntas y opciones de respuesta. Cada sección está dividida en dos contenedores hijos: una imagen y una descripción de la pregunta y opciones de respuesta. Las opciones de respuesta son botones de radio que permiten al usuario elegir una opción.
+
+Finalmente, hay un botón que al hacer clic, ejecuta una función de JavaScript llamada "verResultados()" que mostrará los resultados de la trivia. También hay un contenedor de resultados que estará vacío hasta que el usuario presione el botón para ver los resultados.
+
